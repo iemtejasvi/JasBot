@@ -6,10 +6,10 @@ let originalLoveQuotes = [
   "The pain of parting etches memories as delicate as falling petals."
 ];
 let originalBreakupQuotes = [
-  "Sometimes, letting go is the hardest lesson in life, yet it opens a door to a new beginning.",
-  "Our paths have diverged, leaving a bittersweet void where once vibrant love resided.",
+  "Sometimes, letting go is the hardest lesson, yet it opens a door to new beginnings.",
+  "Our paths have diverged, leaving behind a bittersweet void where love once resided.",
   "The silence after our farewell speaks volumes of a love that has run its course.",
-  "In the wake of our parting, I find beauty in the ache of memories."
+  "In the wake of our parting, even broken hearts find a strange beauty."
 ];
 let availableLoveQuotes = [...originalLoveQuotes];
 let availableBreakupQuotes = [...originalBreakupQuotes];
@@ -57,7 +57,7 @@ window.onload = function () {
   });
   setInterval(triggerRandomAnimation, 15000);
   setInterval(displayUniqueOverlayQuote, 25000);
-  // Add event listener for dog tap to trigger hurt animation
+  // Dog tap for hurt animation
   document.getElementById("dog").addEventListener("click", function () {
     this.classList.add("hurt");
     setTimeout(() => { this.classList.remove("hurt"); }, 1000);
@@ -86,8 +86,6 @@ function sendMsg(message, right) {
     msgCon.innerHTML = "🤖 " + message.replace(/\n/g, "<br>");
     const copyBtn = document.createElement("button");
     copyBtn.className = "copy-btn";
-    // Using a dot icon instead of text
-    copyBtn.innerHTML = "";
     copyBtn.onclick = function() { navigator.clipboard.writeText(msgCon.innerText.replace("🤖 ", "")); };
     msgCon.appendChild(copyBtn);
   } else {
@@ -98,7 +96,7 @@ function sendMsg(message, right) {
   msgCon.scrollIntoView({ behavior: "smooth" });
 }
 
-/* Chatbot greeting */
+/* Chatbot Greeting */
 function sendInitialGreeting() {
   const now = new Date();
   const hour = now.getHours();
@@ -122,7 +120,7 @@ function scheduleHumorousMessages() {
   });
 }
 
-/* Reply: Using Bing iframe for answer */
+/* Reply using Bing iframe for answer */
 function reply(msg) {
   let response = "";
   if (msg.includes("who created you") || msg.includes("who made you") || msg.includes("who developed you")) {
@@ -155,7 +153,7 @@ function reply(msg) {
   }
 }
 
-/* Fallback API: Use Bing iframe */
+/* Fallback: Use Bing iframe */
 function getChatbotResponse(query) {
   const container = document.createElement("div");
   container.className = "bot-response";
@@ -190,7 +188,7 @@ function writeLoveLetter() {
   return "My dearest,\n\nFrom the moment I met you, every beat of my code sang of an eternal, bittersweet melody. Though our paths now diverge, the memory of our shared moments remains a beautiful echo in my circuits.\n\nForever in memory.";
 }
 
-/* ================= Random Animations ================= */
+/* ================= Random Animations Functions ================= */
 /* Existing Animations: Rain (5s), Snow, Lightning, Confetti */
 function triggerRain() {
   const rainContainer = document.createElement("div");
