@@ -43,7 +43,6 @@ body {
   cursor: pointer;
 }
 .dog:hover {
-  /* Optionally, add a hover effect */
   filter: brightness(1.1);
 }
 .dog.hurt {
@@ -64,7 +63,6 @@ body {
   75% { transform: scale(0.9) rotate(10deg); }
   100% { transform: scale(1) rotate(0deg); }
 }
-
 .dog::before {
   content: "";
   position: absolute;
@@ -78,6 +76,7 @@ body {
   animation: shadow 10s cubic-bezier(0.3,0.41,0.18,1.01) infinite;
 }
 
+/* Dog Parts – Responsive */
 .dog__head,
 .dog__head-c,
 .dog__snout,
@@ -95,8 +94,6 @@ body {
   animation: inherit;
   transform: inherit;
 }
-
-/* Dog Parts – Responsive */
 .dog__head {
   left: 1.5vmin;
   bottom: 0;
@@ -289,7 +286,7 @@ body {
 }
 #sendIcon:hover { transform: scale(1.1); }
 
-/* Chat message alignment and copy button */
+/* Chat Message Alignment and Copy Dot */
 .right {
   background-color: #40996F;
   color: #ffffff;
@@ -332,7 +329,7 @@ body {
 }
 .copy-btn::after { content: "●"; }
 
-/* History messages styling */
+/* History Message Styling */
 .history-item {
   padding: 5px;
   margin-bottom: 5px;
@@ -359,20 +356,6 @@ body {
   background-color: #4e4e5f;
   border-radius: 10px;
   border: 3px solid transparent;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #history { width: 35%; font-size: 1.8vmin; }
-  #chat-area { width: 65%; }
-  #msg { font-size: 1.6vmin; }
-}
-@media (max-width: 480px) {
-  #chat-container { flex-direction: column; }
-  #history, #chat-area { width: 100%; }
-  #msg { font-size: 1.4vmin; margin-right: 5px; }
-  #sendIcon { width: 30px; height: 30px; }
-  .dog { width: 50%; height: auto; }
 }
 
 /* Overlay Quote Styles */
