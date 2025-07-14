@@ -447,3 +447,93 @@ p, h1, h2, h3, h4 {
 .green { background-color: rgb(42, 239, 190); }
 .blue { background-color: rgb(0, 140, 255); }
 /* --- End New Dog Animation Styles --- */
+
+/* Responsive Styles */
+@media (max-width: 1023px) {
+  #history {
+    display: none !important;
+  }
+  #chat-container {
+    flex-direction: column;
+    height: calc(100vh - 70px);
+    min-height: 0;
+  }
+  #chat-area {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  #messages {
+    flex: 1;
+    min-height: 0;
+    max-height: none;
+    padding: 8px 4vw;
+    font-size: 1.1rem;
+    overflow-y: auto;
+  }
+  #inputSystem {
+    flex-direction: row;
+    padding: 10px 4vw 10px 4vw;
+    margin: 0;
+    border-radius: 0 0 18px 18px;
+  }
+  #msg {
+    font-size: 1rem;
+    padding: 12px 14px;
+    margin-right: 8px;
+    border-radius: 22px;
+  }
+  #sendIcon {
+    width: 38px;
+    height: 38px;
+    padding: 6px;
+  }
+  #chat-header {
+    font-size: 1.2rem;
+    padding: 12px 10vw 10px 10vw;
+    margin: 18px auto 0 auto;
+    border-radius: 18px;
+  }
+  .right, .left {
+    font-size: 1rem;
+    padding: 10px 12px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  #chat-header {
+    font-size: 1.3rem;
+    padding: 16px 6vw 12px 6vw;
+    margin: 12px auto 0 auto;
+    border-radius: 14px;
+  }
+  #messages {
+    font-size: 1.15rem;
+    padding: 10px 4vw;
+  }
+  #inputSystem {
+    padding: 12px 4vw 12px 4vw;
+    border-radius: 0 0 14px 14px;
+  }
+  #msg {
+    font-size: 1.15rem;
+    padding: 16px 16px;
+    border-radius: 20px;
+  }
+  #sendIcon {
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+  }
+  .right, .left {
+    font-size: 1.15rem;
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+}
