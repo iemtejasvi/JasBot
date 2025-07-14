@@ -3,56 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JasBot - Your Professional Assistant</title>
+  <title>Brainrot Bot - Your Professional Assistant</title>
   <link rel="stylesheet" href="bot.css">
   <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
   <script src="bot.js" defer></script>
 </head>
 <body>
-  <!-- Animated Dog Background -->
-  <div class="animated-bg">
-    <div class="dog" id="dog">
-      <div class="dog__paws">
-        <div class="dog__bl-leg leg">
-          <div class="dog__bl-paw paw"></div>
-          <div class="dog__bl-top top"></div>
-        </div>
-        <div class="dog__fl-leg leg">
-          <div class="dog__fl-paw paw"></div>
-          <div class="dog__fl-top top"></div>
-        </div>
-        <div class="dog__fr-leg leg">
-          <div class="dog__fr-paw paw"></div>
-          <div class="dog__fr-top top"></div>
-        </div>
+  <div class="wrapper">
+    <div class="marker red d-none"></div>
+    <div class="marker green d-none"></div>
+    <div class="marker blue d-none"></div>
+    <div class="dog">
+      <div class="body-wrapper">
+        <div class="body img-bg"></div>
       </div>
-      <div class="dog__body">
-        <div class="dog__tail"></div>
+      <div class="head-wrapper">
+        <div class="head img-bg"></div>
       </div>
-      <div class="dog__head">
-        <div class="dog__snout">
-          <div class="dog__nose"></div>
-          <div class="dog__eyes">
-            <div class="dog__eye-l"></div>
-            <div class="dog__eye-r"></div>
-          </div>
-        </div>
+      <div class="leg-wrapper">
+        <div class="leg one img-bg"></div>
       </div>
-      <div class="dog__head-c">
-        <div class="dog__ear-l"></div>
-        <div class="dog__ear-r"></div>
+      <div class="leg-wrapper">
+        <div class="leg two img-bg"></div>
+      </div>
+      <div class="leg-wrapper">
+        <div class="leg three img-bg"></div>
+      </div>
+      <div class="leg-wrapper">
+        <div class="leg four img-bg"></div>
+      </div>
+      <div class="tail-wrapper">
+        <div class="tail img-bg"></div>
       </div>
     </div>
   </div>
-
+  <div class="indicator"></div>
   <!-- Random Animations Container -->
   <div id="random-animations"></div>
 
-  <!-- Overlay for Unique Quotes -->
-  <div id="overlay-quote-container"></div>
-
   <!-- Chat Header -->
-  <div id="chat-header">JasBot Chat</div>
+  <div id="chat-header">Brainrot Bot Chat</div>
+  <div class="header-divider"></div>
 
   <!-- Chat Container with History Bar on Left -->
   <div id="chat-container">
@@ -68,4 +59,5 @@
     </div>
   </div>
 </body>
-</html>
+<script type='text/javascript' src='https://www.botlibre.com/scripts/sdk.js'></script>
+<script type='text/javascript' src='https://www.botlibre.com/scripts/game-sdk.js'></script>
