@@ -75,7 +75,7 @@ function sendInitialGreeting() {
   const now = new Date();
   const hour = now.getHours();
   let greetingTime = hour < 12 ? "Good morning!" : hour < 18 ? "Good afternoon!" : "Good evening!";
-  setTimeout(() => { sendMsg(`${greetingTime} I'm Brainrot Bot. How can I assist you today?`, false); }, 2000);
+  setTimeout(() => { sendMsg(`${greetingTime} `, false); }, 2000);
 }
 
 function scheduleHumorousMessages() {
