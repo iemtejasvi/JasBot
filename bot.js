@@ -4,7 +4,7 @@ SDK.lang = "en";
 var sdk = new SDKConnection();
 var web = new WebChatbotListener();
 web.connection = sdk;
-web.instance = "58247963";
+web.instance = "145";
 
 // Overlay quote display for 4 seconds at top center
 function displayOverlayQuote(quote) {
@@ -97,7 +97,7 @@ function scheduleHumorousMessages() {
 /* Reply using Bot Libre REST API */
 function reply(msg) {
   // Bot Libre REST API endpoint and parameters
-  const instance = "58247963"; // Bot Libre bot instance
+  const instance = "145"; // Bot Libre Cindy instance
   const applicationId = "5862133149696133480"; // Your application ID
   const url = "https://www.botlibre.com/rest/json/chat";
   const payload = {
@@ -357,9 +357,12 @@ function getRandomColor() {
           return;
         }
         let { x, y } = elements.dog.actualPos;
-        const dir = directionConversions[targetAngle(elements.dog)];
-        if (dir !== 'up' && dir !== 'down') x += (dir.includes('left')) ? -distance : distance;
-        if (dir !== 'left' && dir !== 'right') y += (dir.includes('up')) ? -distance : distance;
+        const angleKey = targetAngle(elements.dog);
+        const dir = directionConversions[angleKey];
+        if (typeof dir === 'string') {
+          if (dir !== 'up' && dir !== 'down') x += (dir.includes('left')) ? -distance : distance;
+          if (dir !== 'left' && dir !== 'right') y += (dir.includes('up')) ? -distance : distance;
+        }
         positionMarker(0, elements.dog.pos);
         positionMarker(1, control);
         const { x: x2, y: y2 } = rotateCoord({angle: elements.dog.angle, origin: elements.dog.pos, x: elements.dog.pos.x, y: elements.dog.pos.y - 100});
